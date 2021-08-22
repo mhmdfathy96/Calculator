@@ -5,6 +5,7 @@ import '../route.dart';
   return TextStyle(
     color: Colors.black,
     fontSize: 35,
+    locale: Locale.fromSubtags(languageCode: "ar"),
   );
 }
 

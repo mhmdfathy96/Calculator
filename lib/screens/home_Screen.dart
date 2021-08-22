@@ -43,9 +43,16 @@ class _HomeScreenState extends State<HomeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-        Text(
-          (state is InitializeState)?"0":state.props[0] as String,
-        style: textStyle1B(),),
+
+          Flexible(
+            child: Container(
+              child:
+                Text(
+                    (state is InitializeState)?"0":state.props[0] as String,
+                  style: textStyle1(),overflow: TextOverflow.fade,textDirection: TextDirection.rtl,softWrap: false,maxLines: 1,),
+
+            ),
+          ),
         Text(
           (state is InitializeState)?"":state.props[1] as String,
         style: textStyle2(),),
